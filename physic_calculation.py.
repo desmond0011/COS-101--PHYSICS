@@ -1,0 +1,72 @@
+# Physics Formula Calculator
+
+# Function 1: Final Velocity
+def final_velocity():
+    u = float(input("Enter initial velocity: "))
+    a = float(input("Enter acceleration: "))
+    t = float(input("Enter time: "))
+    v = u + (a * t)
+    print("Final Velocity =", v)
+
+
+# Function 2: Force
+def force():
+    m = float(input("Enter mass: "))
+    a = float(input("Enter acceleration: "))
+    f = m * a
+    print("Force =", f)
+
+
+# Function 3: Weight
+def weight():
+    m = float(input("Enter mass: "))
+    g = float(input("Enter gravitational acceleration: "))
+    w = m * g
+    print("Weight =", w)
+
+
+# Function 4: Power
+def power():
+    work = float(input("Enter work done: "))
+    time = float(input("Enter time: "))
+    p = work / time
+    print("Power =", p)
+
+
+# Function 5: Kinetic Energy
+def kinetic_energy():
+    m = float(input("Enter mass: "))
+    v = float(input("Enter velocity: "))
+    ke = 0.5 * m * (v ** 2)
+    print("Kinetic Energy =", ke)
+
+
+# Main Program
+while True:
+    print("\nPHYSICS FORMULA CALCULATOR")
+    print("1. Final Velocity")
+    print("2. Force")
+    print("3. Weight")
+    print("4. Power")
+    print("5. Kinetic Energy")
+
+    choice = input("Select a formula (1-5): ")
+
+    if choice == "1":
+        final_velocity()
+    elif choice == "2":
+        force()
+    elif choice == "3":
+        weight()
+    elif choice == "4":
+        power()
+    elif choice == "5":
+        kinetic_energy()
+    else:
+        print("Invalid selection!")
+
+    again = input("\nWould you like to continue? (yes/no): ")
+
+    if again.lower() != "yes":
+        print("Thank you for using the Physics Calculator!")
+        break
